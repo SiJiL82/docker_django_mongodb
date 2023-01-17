@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'mongodb',
         'CLIENT': {
-            'host': 'mongodb://db:27017',
-            'username': env('MONGODB_USER'),
-            'password': env('MONGODB_PASSWORD'),
+            'host': 'mongodb://' + env('DB_HOST') + ':' + env('DB_PORT'),
+            'username': env('DB_USER'),
+            'password': env('DB_PASSWORD'),
         }
     }
 }
